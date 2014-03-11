@@ -1,0 +1,3 @@
+[submodule "tools/dockutil"]
+	path = tools/dockutil
+	url = git@github.com:kcrawford/dockutil.git
