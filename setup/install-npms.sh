@@ -6,4 +6,5 @@ npm install -g yo
 # npm install -g generator-init
 # npm install -g generator-mocha
 # npm install -g generator-polymer
+npm install -g handlebars
 npm install -g generator-webapp
