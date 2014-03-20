@@ -14,14 +14,15 @@ while true; do sudo -n true; sleep 600; kill -0 "$$" || exit; done 2>/dev/null &
 #     echo "Setting computer name to $compname"
 #     sudo scutil --set ComputerName "$compname"
 #     sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$compname"
-
-# pub=$HOME/.ssh/id_rsa.pub
-# echo 'Checking for SSH key, generating one if it does not exist...'
-#     [[ -f $pub ]] || ssh-keygen -t rsa
-
-# echo 'Copying public key to clipboard. Paste it into your Github account...'
-#     [[ -f $pub ]] && cat $pub | pbcopy
-#     open 'https://github.com/account/ssh'
+echo "Generating SSH key..."
+    if [[ -f $HOME/.ssh/id_rsa.pub ]]; then
+        ssh-keygen -f ~/.ssh/id_rsa -N "" -t rsa -C "$GIT_AUTHOR_EMAIL"
+        ssh-add -K ~/.ssh/id_rsa
+    fi
+    
+echo 'Copying public key to clipboard. Paste it into your Github account...'
+    pbcopy < ~/.ssh/id_rsa.pub
+    open 'https://github.com/account/ssh'
 
 echo "Calling setup/install.sh..."
     curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/install.sh | sh
