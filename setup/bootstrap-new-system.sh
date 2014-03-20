@@ -24,7 +24,7 @@ while true; do sudo -n true; sleep 600; kill -0 "$$" || exit; done 2>/dev/null &
 #     open 'https://github.com/account/ssh'
 
 echo "Calling setup/install.sh..."
-    curl -fsSL https://raw.github.com/rbartoli/dotfiles/master/setup/install.sh | sh
+    curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/install.sh | sh
 
 echo "Installing Homebrew..."
     which -s brew
@@ -33,13 +33,13 @@ echo "Installing Homebrew..."
     fi
 
 echo "Installing brew packages..."
-    curl -fsSL https://raw.github.com/rbartoli/dotfiles/master/setup/install-brews.sh | sh
+    curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/install-brews.sh | sh
 
 echo "Installing native apps..."
-    curl -fsSL https://raw.github.com/rbartoli/dotfiles/master/setup/install-apps.sh | sh
+    curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/install-apps.sh | sh
 
 echo "Installing node.js packages..."
-    curl -fsSL https://raw.github.com/rbartoli/dotfiles/master/setup/install-npms.sh | sh
+    curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/install-npms.sh | sh
 
 echo "Tweaking OS X..."
-    curl -fsSL https://raw.github.com/rbartoli/dotfiles/master/setup/configure-osx.sh | sh
+    curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/configure-osx.sh | sh
