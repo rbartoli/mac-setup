@@ -19,8 +19,9 @@ installcask dash
 installcask diffmerge
 installcask dropbox
 installcask evernote
-installcask freemind
 installcask firefox
+installcask fontprep
+installcask freemind
 installcask google-chrome
 installcask imagealpha
 installcask imageoptim
@@ -29,6 +30,7 @@ installcask launchrocket
 installcask mamp
 installcask mosh
 installcask mysql-workbench
+installcask nosleep
 installcask robomongo
 installcask sequel-pro
 installcask spectacle
