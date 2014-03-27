@@ -20,9 +20,9 @@ echo "Generating SSH key..."
         ssh-add -K ~/.ssh/id_rsa
     fi
     
-echo 'Copying public key to clipboard. Paste it into your Github account...'
+echo "Copying public key to clipboard. Paste it into your Github account..."
     pbcopy < ~/.ssh/id_rsa.pub
-    open 'https://github.com/account/ssh'
+    open "https://github.com/account/ssh"
 
 echo "Calling setup/install.sh..."
     curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/install.sh | sh
@@ -32,6 +32,9 @@ echo "Installing Homebrew..."
     if [[ $? != 0 ]]; then
         ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
     fi
+    
+echo "Installing ruby gems..."
+    curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/install-gems.sh | sh
 
 echo "Installing brew packages..."
     curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/install-brews.sh | sh
