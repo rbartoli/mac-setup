@@ -37,5 +37,8 @@ sudo ln -s /usr/local/Cellar/ntfs-3g/2014.2.15/sbin/mount_ntfs /sbin/mount_ntfs
 sudo cp -rf /usr/local/Cellar/fuse4x-kext/0.9.2/Library/Extensions/fuse4x.kext /Library/Extensions
 sudo chmod +s /Library/Extensions/fuse4x.kext/Support/load_fuse4x
 
+# Required by vagrant-digitalocean
+brew install curl-ca-bundle
+
 # Remove outdated versions from the cellar
 brew cleanup
