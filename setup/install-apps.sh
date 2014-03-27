@@ -54,6 +54,9 @@ installcask qlstephen
 installcask quicklook-csv
 installcask quicklook-json
 
+vagrant plugin install vagrant-digitalocean
+vagrant plugin install vagrant-vbguest
+
 # Enable casks in Alfred
 brew cask alfred link
 
