@@ -24,8 +24,8 @@ while true; do sudo -n true; sleep 600; kill -0 "$$" || exit; done 2>/dev/null &
 #     pbcopy < ~/.ssh/id_rsa.pub
 #     open "https://github.com/account/ssh"
 
-echo "Installing dotfiles..."
-    curl -fsSL https://raw.github.com/rbartoli/dotfiles/master/setup/install.sh | sh
+# echo "Installing dotfiles..."
+#     curl -fsSL https://raw.github.com/rbartoli/dotfiles/master/setup/install.sh | sh
 
 echo "Installing homebrew..."
     which -s brew
