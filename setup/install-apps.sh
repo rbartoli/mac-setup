@@ -4,14 +4,16 @@
 brew tap phinze/homebrew-cask
 brew install brew-cask
 
+# Install brew cask alternate versions
 function installcask() {
     brew cask install --appdir=/Applications "${@}" 2> /dev/null
 }
 
 # Install native apps
 installcask alfred
-installcask app-cleaner
-installcask bittorrent-sync
+installcask appcleaner
+installcask battery-time-remaining
+# installcask bittorrent-sync
 installcask dash
 installcask caffeine
 installcask cyberduck
@@ -20,27 +22,34 @@ installcask diffmerge
 installcask dropbox
 installcask evernote
 installcask firefox
+installcask flux
 installcask fontprep
 installcask freemind
-installcask google-chrome
+installcask google-chrome-dev
 installcask imagealpha
 installcask imageoptim
+installcask ios7-screensaver
 installcask iterm2
+installcask jumpcut
+installcask kaleidoscope
 installcask launchrocket
 installcask mamp
+installcask menumeters
+installcask mongodb
+# installcask monolingual
 installcask mosh
-installcask mysql-workbench
+installcask mysqlworkbench
 installcask nosleep
 installcask robomongo
 installcask sequel-pro
+installcask skype
 installcask spectacle
 installcask spotify
-installcask skype
-installcask sublime-text
+installcask sublime-text3
 installcask teamviewer
 installcask the-unarchiver
-installcask tor-browser
-installcask totalspaces
+installcask torbrowser
+# installcask totalspaces
 installcask transmission
 installcask vagrant
 installcask virtualbox
