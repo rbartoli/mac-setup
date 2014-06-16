@@ -14,6 +14,7 @@ while true; do sudo -n true; sleep 600; kill -0 "$$" || exit; done 2>/dev/null &
 #     echo "Setting computer name to $compname"
 #     sudo scutil --set ComputerName "$compname"
 #     sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$compname"
+
 # echo "Generating SSH key..."
 #     if [[ -f $HOME/.ssh/id_rsa.pub ]]; then
 #         ssh-keygen -f ~/.ssh/id_rsa -N "" -t rsa -C "$GIT_AUTHOR_EMAIL"
