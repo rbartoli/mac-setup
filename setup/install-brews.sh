@@ -25,7 +25,6 @@ brew install homebrew/dupes/grep
 # Install other useful binaries
 brew install ack
 brew install git
-brew install node
 brew install tree
 
 # Install NTFS write support
@@ -39,6 +38,12 @@ sudo chmod +s /Library/Extensions/fuse4x.kext/Support/load_fuse4x
 
 # Required by vagrant-digitalocean
 brew install curl-ca-bundle
+
+# Install sshuttle
+brew install sshuttle
+
+# Install mitmproxy
+brew install mitmproxy
 
 # Remove outdated versions from the cellar
 brew cleanup
