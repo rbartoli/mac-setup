@@ -46,5 +46,5 @@ echo "Installing native apps..."
 echo "Installing node.js packages..."
     curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/install-npms.sh | sh
 
-# echo "Tweaking OS X..."
-#     curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/configure-osx.sh | sh
+echo "Tweaking OS X..."
+    curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/configure-osx.sh | sh
