@@ -43,7 +43,10 @@ brew install curl-ca-bundle
 brew install sshuttle
 
 # Install mitmproxy
-brew install mitmproxy
+# brew install mitmproxy
+
+# Install PHP packate manager
+brew install composer
 
 # Remove outdated versions from the cellar
 brew cleanup
