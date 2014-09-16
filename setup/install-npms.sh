@@ -9,5 +9,12 @@ nvm alias default 0.10
 
 # Yeoman and generators
 npm install -g yo
-npm install -g handlebars
 npm install -g generator-webapp
+# npm install -g grunt-cli
+
+# Node tools
+npm install -g handlebars
+npm install -g svgo
+npm install -g nodemon
+npm install -g node-inspector
+# npm install -g compass
