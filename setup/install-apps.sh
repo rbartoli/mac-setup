@@ -13,7 +13,6 @@ function installcask() {
 installcask alfred
 installcask appcleaner
 installcask battery-time-remaining
-# installcask bittorrent-sync
 installcask dash
 installcask caffeine
 installcask cyberduck
@@ -26,17 +25,16 @@ installcask flux
 installcask fontprep
 installcask freemind
 installcask google-chrome-dev
+installcask google-drive
 installcask imagealpha
 installcask imageoptim
 installcask ios7-screensaver
 installcask iterm2
 installcask jumpcut
-installcask kaleidoscope
 installcask launchrocket
 installcask mamp
 installcask menumeters
 installcask mongodb
-# installcask monolingual
 installcask mosh
 installcask mysqlworkbench
 installcask nosleep
@@ -49,8 +47,8 @@ installcask sublime-text3
 installcask teamviewer
 installcask the-unarchiver
 installcask torbrowser
-# installcask totalspaces
 installcask transmission
+installcask tunnelbear
 installcask vagrant
 installcask virtualbox
 installcask vlc
@@ -63,8 +61,8 @@ installcask qlstephen
 installcask quicklook-csv
 installcask quicklook-json
 
-vagrant plugin install vagrant-digitalocean
 vagrant plugin install vagrant-vbguest
+vagrant plugin install vagrant-digitalocean
 
 # Enable casks in Alfred
 brew cask alfred link
