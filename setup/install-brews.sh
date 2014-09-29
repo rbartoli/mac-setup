@@ -45,8 +45,14 @@ brew install sshuttle
 # Install mitmproxy
 # brew install mitmproxy
 
-# Install PHP packate manager
+# Install updated gcc compiler
+brew install apple-gcc42
+
+# Install PHP package manager
 brew install composer
+
+# Install PHP linter
+brew install homebrew/php/phplint
 
 # Remove outdated versions from the cellar
 brew cleanup

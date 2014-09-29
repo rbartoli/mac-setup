@@ -61,8 +61,13 @@ installcask qlstephen
 installcask quicklook-csv
 installcask quicklook-json
 
+# Vagrant plugins
 vagrant plugin install vagrant-vbguest
 vagrant plugin install vagrant-digitalocean
+
+# Python linter dependencies
+sudo easy_install pip
+pip install pylint
 
 # Enable casks in Alfred
 brew cask alfred link
