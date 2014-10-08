@@ -31,7 +31,7 @@ while true; do sudo -n true; sleep 600; kill -0 "$$" || exit; done 2>/dev/null &
 echo "Installing homebrew..."
     which -s brew
     if [[ $? != 0 ]]; then
-        ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     fi
     
 echo "Installing ruby gems..."
