@@ -12,8 +12,8 @@ function installcask() {
 # Install native apps
 installcask alfred
 installcask appcleaner
+installcask asepsis
 installcask battery-time-remaining
-installcask dash
 installcask caffeine
 installcask cyberduck
 installcask dash
@@ -32,6 +32,7 @@ installcask ios7-screensaver
 installcask iterm2
 installcask jumpcut
 installcask launchrocket
+installcask limechat
 installcask mamp
 installcask menumeters
 installcask mongodb

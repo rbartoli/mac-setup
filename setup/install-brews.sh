@@ -9,23 +9,23 @@ brew update
 # Upgrade any already-installed formulae
 brew upgrade
 
-# Install GNU core utilities (those that come with OS X are outdated)
-brew install coreutils
-
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew install findutils
-
-# Install wget with IRI support
-brew install wget --enable-iri
-
-# Install more recent versions of some OS X tools
+# Add repository for newer or dev versions
 brew tap homebrew/dupes
-brew install homebrew/dupes/grep
 
 # Install other useful binaries
 brew install ack
+brew install apple-gcc42
+brew install composer
+brew install coreutils
+brew install curl-ca-bundle # Required by vagrant-digitalocean
+brew install findutils
 brew install git
+brew install grep
+# brew install mitmproxy
+brew install phplint
+brew install sshuttle
 brew install tree
+brew install wget --enable-iri
 
 # Install NTFS write support
 brew install fuse4x
@@ -35,24 +35,6 @@ sudo mv /sbin/mount_ntfs /sbin/mount_ntfs.orig
 sudo ln -s /usr/local/Cellar/ntfs-3g/2014.2.15/sbin/mount_ntfs /sbin/mount_ntfs
 sudo cp -rf /usr/local/Cellar/fuse4x-kext/0.9.2/Library/Extensions/fuse4x.kext /Library/Extensions
 sudo chmod +s /Library/Extensions/fuse4x.kext/Support/load_fuse4x
-
-# Required by vagrant-digitalocean
-brew install curl-ca-bundle
-
-# Install sshuttle
-brew install sshuttle
-
-# Install mitmproxy
-# brew install mitmproxy
-
-# Install updated gcc compiler
-brew install apple-gcc42
-
-# Install PHP package manager
-brew install composer
-
-# Install PHP linter
-brew install homebrew/php/phplint
 
 # Remove outdated versions from the cellar
 brew cleanup
