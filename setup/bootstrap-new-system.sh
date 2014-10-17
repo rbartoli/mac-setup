@@ -4,9 +4,9 @@
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
-while true; do sudo -n true; sleep 600; kill -0 "$$" || exit; done 2>/dev/null &
+while true; do sudo -n true; sleep 6000; kill -0 "$$" || exit; done 2>/dev/null &
 
-# echo 'Enter new hostname of the machine (e.g. macbook-paulmillr)'
+# echo 'Enter new hostname of the machine (e.g. macbook-pro)'
 #     read hostname
 #     echo "Setting new hostname to $hostname..."
 #     sudo scutil --set HostName "$hostname"
@@ -29,10 +29,7 @@ while true; do sudo -n true; sleep 600; kill -0 "$$" || exit; done 2>/dev/null &
 #     curl -fsSL https://raw.github.com/rbartoli/dotfiles/master/setup/install.sh | sh
 
 echo "Installing homebrew..."
-    which -s brew
-    if [[ $? != 0 ]]; then
-	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    fi
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     
 echo "Installing ruby gems..."
     curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/install-gems.sh | sh
@@ -46,5 +43,5 @@ echo "Installing native apps..."
 echo "Installing node.js packages..."
     curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/install-npms.sh | sh
 
-echo "Tweaking OS X..."
-    curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/configure-osx.sh | sh
+# echo "Tweaking OS X..."
+    # curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/configure-osx.sh | sh

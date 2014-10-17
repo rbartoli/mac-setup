@@ -10,10 +10,10 @@ function installcask() {
 }
 
 # Install native apps
-installcask alfred
+# installcask alfred
 installcask appcleaner
 installcask asepsis
-installcask battery-time-remaining
+# installcask battery-time-remaining
 installcask caffeine
 installcask cyberduck
 installcask dash
@@ -24,17 +24,16 @@ installcask firefox
 installcask flux
 installcask fontprep
 installcask freemind
-installcask google-chrome-dev
+installcask google-chrome
 installcask google-drive
 installcask imagealpha
 installcask imageoptim
 installcask ios7-screensaver
 installcask iterm2
 installcask jumpcut
-installcask launchrocket
 installcask limechat
 installcask mamp
-installcask menumeters
+# installcask menumeters
 installcask mongodb
 installcask mosh
 installcask mysqlworkbench
@@ -68,10 +67,10 @@ vagrant plugin install vagrant-digitalocean
 
 # Python linter dependencies
 sudo easy_install pip
-pip install pylint
+sudo pip install pylint
 
 # Enable casks in Alfred
-brew cask alfred link
+# brew cask alfred link
 
 # Remove outdated versions from the cellar
 brew cleanup

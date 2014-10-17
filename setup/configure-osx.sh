@@ -113,15 +113,10 @@ defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Trackpad: map bottom right corner to right-click
-# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
-# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
-# defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
-# defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
-
-# Trackpad: swipe between pages with three fingers
-# defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool true
-# defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerHorizSwipeGesture -int 1
-# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 1
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
 
 # Disable “natural” (Lion-style) scrolling
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
@@ -136,6 +131,7 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # Enable access for assistive devices
 echo -n 'a' | sudo tee /private/var/db/.AccessibilityAPIEnabled > /dev/null 2>&1
 sudo chmod 444 /private/var/db/.AccessibilityAPIEnabled
+
 # TODO: avoid GUI password prompt somehow (http://apple.stackexchange.com/q/60476/4408)
 #sudo osascript -e 'tell application "System Events" to set UI elements enabled to true'
 
@@ -154,6 +150,7 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # Automatically illuminate built-in MacBook keyboard in low light
 defaults write com.apple.BezelServices kDim -bool true
+
 # Turn off keyboard illumination when computer is not used for 5 minutes
 defaults write com.apple.BezelServices kDimTime -int 300
 
@@ -344,11 +341,8 @@ defaults write com.apple.dock mru-spaces -bool false
 # Remove the animation when hiding/showing the Dock
 # defaults write com.apple.dock autohide-time-modifier -float 0
 
-# Enable the 2D Dock
-# defaults write com.apple.dock no-glass -bool true
-
 # Automatically hide and show the Dock
-defaults write com.apple.dock autohide -bool false
+defaults write com.apple.dock autohide -bool true
 
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
@@ -420,10 +414,12 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 # Hide Spotlight tray-icon (and subsequent helper)
 sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
+
 # Disable Spotlight indexing for any volume that gets mounted and has not yet
 # been indexed before.
 # Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing any volume.
 sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
+
 # Change indexing order and disable some file types
 defaults write com.apple.spotlight orderedItems -array \
 	'{"enabled" = 1;"name" = "APPLICATIONS";}' \
@@ -444,20 +440,12 @@ defaults write com.apple.spotlight orderedItems -array \
 	'{"enabled" = 0;"name" = "SOURCE";}'
 # Load new settings before rebuilding the index
 killall mds
+
 # Make sure indexing is enabled for the main volume
 sudo mdutil -i on /
+
 # Rebuild the index from scratch
 sudo mdutil -E /
-
-###############################################################################
-# Time Machine                                                                #
-###############################################################################
-
-# Prevent Time Machine from prompting to use new hard drives as backup volume
-defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
-
-# Disable local Time Machine backups
-hash tmutil &> /dev/null && sudo tmutil disablelocal
 
 ###############################################################################
 # TextEdit                                                                    #
@@ -465,27 +453,10 @@ hash tmutil &> /dev/null && sudo tmutil disablelocal
 
 # Use plain text mode for new TextEdit documents
 defaults write com.apple.TextEdit RichText -int 0
+
 # Open and save files as UTF-8 in TextEdit
 defaults write com.apple.TextEdit PlainTextEncoding -int 4
 defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
-
-###############################################################################
-# Mac App Store                                                               #
-###############################################################################
-
-# Enable the WebKit Developer Tools in the Mac App Store
-defaults write com.apple.appstore WebKitDeveloperExtras -bool true
-
-# Enable Debug Menu in the Mac App Store
-defaults write com.apple.appstore ShowDebugMenu -bool true
-
-###############################################################################
-# Google Chrome & Google Chrome Canary                                        #
-###############################################################################
-
-# Allow installing user scripts via GitHub or Userscripts.org
-# defaults write com.google.Chrome ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*"
-# defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*"
 
 ###############################################################################
 # Transmission.app                                                            #
@@ -507,47 +478,38 @@ defaults write org.m0k.transmission WarningDonate -bool false
 # Hide the legal disclaimer
 defaults write org.m0k.transmission WarningLegal -bool false
 
-###############################################################################
-# Kill affected applications                                                  #
-###############################################################################
-
-# for app in "Address Book" "Calendar" "Contacts" "Dashboard" "Dock" "Finder" \
-# 	"Mail" "Safari" "SizeUp" "SystemUIServer" "Terminal" "Transmission" \
-# 	"Twitter" "iCal" "iTunes"; do
-# 	killall "$app" > /dev/null 2>&1
-# done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
 
 ###############################################################################
 # Add custom applications to dock                                             #
 ###############################################################################
 
-cd $dir
+# cd $dir
 
-function dockutil() {
-    ~/.dotfiles/tools/dockutil/scripts/dockutil "${@}"
-}
+# function dockutil() {
+#     ~/.dotfiles/tools/dockutil/scripts/dockutil "${@}"
+# }
 
-dockutil --add "/Applications/Mission Control.app"
-defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
-dockutil --add "/Applications/Google Chrome.app"
-dockutil --add "/Applications/iTerm.app"
-dockutil --add "/Applications/Sublime Text 2.app"
-defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
-dockutil --add "/Applications/Robomongo.app"
-dockutil --add "/Applications/Sequel Pro.app"
-dockutil --add "/Applications/MySQLWorkbench.app"
-defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
-dockutil --add "/Applications/FreeMind.app"
-dockutil --add "/Applications/Skype.app"
-dockutil --add "/Applications/Evernote.app"
-# dockutil --add "/Applications/Spotify.app"
-defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
-dockutil --add "/Applications/Cyberduck.app"
-dockutil --add "/Applications/Transmission.app"
-dockutil --add '/Applications' --replacing 'Downloads' --view list --display folder
-dockutil --add '~/Downloads' --view list --display folder
-defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
+# dockutil --add "/Applications/Mission Control.app"
+# defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
+# dockutil --add "/Applications/Google Chrome.app"
+# dockutil --add "/Applications/iTerm.app"
+# dockutil --add "/Applications/Sublime Text 2.app"
+# defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
+# dockutil --add "/Applications/Robomongo.app"
+# dockutil --add "/Applications/Sequel Pro.app"
+# dockutil --add "/Applications/MySQLWorkbench.app"
+# defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
+# dockutil --add "/Applications/FreeMind.app"
+# dockutil --add "/Applications/Skype.app"
+# dockutil --add "/Applications/Evernote.app"
+# # dockutil --add "/Applications/Spotify.app"
+# defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
+# dockutil --add "/Applications/Cyberduck.app"
+# dockutil --add "/Applications/Transmission.app"
+# dockutil --add '/Applications' --replacing 'Downloads' --view list --display folder
+# dockutil --add '~/Downloads' --view list --display folder
+# defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
 
 # Add iOS Simulator to Launchpad
 # ln -s /Applications/Xcode.app/Contents/Applications/iPhone\ Simulator.app /Applications/iOS\ Simulator.app
