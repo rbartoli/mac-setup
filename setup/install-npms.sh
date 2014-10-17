@@ -3,11 +3,11 @@
 # NVM
 brew install nvm
 
-source $(brew --prefix nvm)/nvm.sh
+mkdir ~/.nvm
 export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 nvm install 0.10
-nvm use 0.10
 nvm alias default 0.10
 
 # Tell npm to shut the hell up

@@ -65,9 +65,9 @@ installcask quicklook-json
 vagrant plugin install vagrant-vbguest
 vagrant plugin install vagrant-digitalocean
 
-# Python linter dependencies
-sudo easy_install pip
-sudo pip install pylint
+# Composer
+curl -sS https://getcomposer.org/installer | php
+sudo mv composer.phar /usr/local/bin/composer
 
 # Enable casks in Alfred
 # brew cask alfred link
