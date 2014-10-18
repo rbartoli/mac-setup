@@ -26,7 +26,7 @@ while true; do sudo -n true; sleep 6000; kill -0 "$$" || exit; done 2>/dev/null 
 #     open "https://github.com/account/ssh"
 
 # echo "Installing dotfiles..."
-#     curl -fsSL https://raw.github.com/rbartoli/dotfiles/master/setup/install.sh | sh
+    # curl -fsSL https://raw.github.com/rbartoli/dotfiles/master/setup/install.sh | sh
 
 echo "Installing homebrew..."
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
