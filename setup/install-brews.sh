@@ -14,7 +14,7 @@ brew install git
 brew install grep
 brew install sshuttle
 brew install tree
-brew install wget --enable-iri
+brew install wget --with-iri
 
 # Install NTFS write support
 # brew install osxfuse
