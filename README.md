@@ -5,7 +5,6 @@ This project is a collection of my scripts to bootstrap a new OS X system
 1. Install [Xcode], if you don't have it yet.
 2. Install [Xcode Command Line Tools], if you don't have it yet.
 3. Open Xcode and accept the license agreement.
-4. Install [dotfiles](http://github.com/rbartoli/dotfiles).
 
 ### Bootstrap new system
 ```bash
