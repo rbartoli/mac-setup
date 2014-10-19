@@ -3,8 +3,8 @@
 # NVM
 brew install nvm
 
-mkdir ~/.nvm
-export NVM_DIR="~/.nvm"
+export NVM_DIR=$HOME/.nvm
+mkdir $NVM_DIR
 source $(brew --prefix nvm)/nvm.sh
 
 nvm install 0.10
