@@ -18,18 +18,18 @@ while true; do sudo -n true; sleep 6000; kill -0 "$$" || exit; done 2>/dev/null 
 echo "Installing dotfiles..."
     curl -fsSL https://raw.github.com/rbartoli/dotfiles/master/setup/install.sh | sh
 
-echo "Installing homebrew..."
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    
-echo "Installing ruby gems..."
-    curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/install-gems.sh | sh
-
 echo "Installing brew packages..."
     curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/install-brews.sh | sh
+
+echo "Installing ruby gems..."
+    curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/install-gems.sh | sh
     
 echo "Installing node.js packages..."
     curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/install-npms.sh | sh
 
+echo "Installing fonts..."
+    curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/install-fonts.sh | sh
+    
 echo "Installing native apps..."
     curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/install-apps.sh | sh
 

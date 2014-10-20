@@ -4,62 +4,57 @@
 brew tap phinze/homebrew-cask
 brew install brew-cask
 
-# Install brew cask alternate versions
-function installcask() {
-    brew cask install --appdir=/Applications "${@}" 2> /dev/null
-}
-
 # Install native apps
-# installcask alfred
-installcask appcleaner
-installcask asepsis
-# installcask battery-time-remaining
-installcask caffeine
-installcask cyberduck
-installcask dash
-installcask diffmerge
-installcask dropbox
-installcask evernote
-installcask firefox
-installcask flux
-installcask fontprep
-installcask freemind
-installcask google-chrome
-installcask google-drive
-installcask imagealpha
-installcask imageoptim
-installcask ios7-screensaver
-installcask iterm2
-installcask jumpcut
-installcask limechat
-installcask mamp
-# installcask menumeters
-installcask mongodb
-installcask mosh
-installcask mysqlworkbench
-installcask nosleep
-installcask robomongo
-installcask sequel-pro
-installcask skype
-installcask spectacle
-installcask spotify
-installcask sublime-text3
-installcask teamviewer
-installcask the-unarchiver
-installcask torbrowser
-installcask transmission
-installcask tunnelbear
-installcask vagrant
-installcask virtualbox
-installcask vlc
+apps=(
+    # alfred
+    appcleaner
+    asepsis
+    caffeine
+    cyberduck
+    dash
+    diffmerge
+    dropbox
+    evernote
+    firefox
+    flux
+    fontprep
+    freemind
+    google-chrome
+    google-drive
+    imagealpha
+    imageoptim
+    ios7-screensaver
+    iterm2
+    jumpcut
+    limechat
+    mamp
+    mongodb
+    mosh
+    mysqlworkbench
+    nosleep
+    robomongo
+    sequel-pro
+    skype
+    spectacle
+    spotify
+    sublime-text3
+    teamviewer
+    the-unarchiver
+    torbrowser
+    transmission
+    tunnelbear
+    vagrant
+    virtualbox
+    vlc
+    # QuickLook plugins
+    betterzipql
+    qlcolorcode
+    qlmarkdown
+    qlstephen
+    quicklook-csv
+    quicklook-json
+)
 
-# QuickLook plugins
-installcask betterzipql
-installcask qlcolorcode
-installcask qlmarkdown
-installcask qlstephen
-installcask quicklook-csv
-installcask quicklook-json
 
 # Vagrant plugins
 vagrant plugin install vagrant-vbguest
@@ -71,6 +66,9 @@ sudo mv composer.phar /usr/local/bin/composer
 
 # Enable casks in Alfred
 # brew cask alfred link
+
+# This script modifies the current user's Spotlight preferences, disabling sharing of Spotlight searches with Apple
+curl -O https://fix-macosx.com/fix-macosx.py && /usr/bin/python fix-macosx.py
 
 # Remove outdated versions from the cellar
 brew cleanup

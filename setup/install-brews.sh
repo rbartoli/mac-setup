@@ -1,20 +1,31 @@
 #!/usr/bin/env bash
 
+# Install homebrew
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 # Check if everything is fine
 brew doctor
+
+# Update brew
+brew update
 
 # Add repository for newer or dev versions
 brew tap homebrew/dupes
 
 # Install other useful binaries
-brew install ack
-brew install coreutils
-brew install findutils
-brew install git
-brew install grep
-brew install sshuttle
-brew install tree
-brew install wget --with-iri
+binaries=(
+    ack
+    bash
+    coreutils
+    findutils
+    git
+    grep
+    sshuttle
+    tree
+    wget --with-iri
+)
+
+brew install ${binaries[@]}
 
 # Install NTFS write support
 # brew install osxfuse
