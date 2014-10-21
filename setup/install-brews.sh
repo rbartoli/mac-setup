@@ -28,12 +28,12 @@ binaries=(
 brew install ${binaries[@]}
 
 # Install NTFS write support
-# brew install osxfuse
-# brew install ntfs-3g
-# sudo mv /sbin/mount_ntfs /sbin/mount_ntfs.orig
-# sudo ln -s /usr/local/sbin/mount_ntfs /sbin/mount_ntfs
-# sudo /bin/cp -RfX /usr/local/opt/osxfuse/Library/Filesystems/osxfusefs.fs /Library/Filesystems/
-# sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
+brew install osxfuse
+brew install ntfs-3g
+sudo mv /sbin/mount_ntfs /sbin/mount_ntfs.orig
+sudo ln -s /usr/local/sbin/mount_ntfs /sbin/mount_ntfs
+sudo /bin/cp -RfX /usr/local/opt/osxfuse/Library/Filesystems/osxfusefs.fs /Library/Filesystems/
+sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
 
 # Remove outdated versions from the cellar
 brew cleanup
