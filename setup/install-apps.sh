@@ -55,14 +55,11 @@ apps=(
     quicklook-json
 )
 
+brew cask install ${apps[@]}
 
 # Vagrant plugins
 vagrant plugin install vagrant-vbguest
 vagrant plugin install vagrant-digitalocean
-
-# Composer
-curl -sS https://getcomposer.org/installer | php
-sudo mv composer.phar /usr/local/bin/composer
 
 # Enable casks in Alfred
 # brew cask alfred link
