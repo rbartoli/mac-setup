@@ -17,7 +17,7 @@ apps=(
     evernote
     firefox
     flux
-    fontprep
+    # fontprep
     freemind
     google-chrome
     google-drive
