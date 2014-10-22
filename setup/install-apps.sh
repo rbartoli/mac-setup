@@ -4,6 +4,9 @@
 brew tap phinze/homebrew-cask
 brew install brew-cask
 
+# Tap repository for dev or alternate versions
+brew tap caskroom/versions
+
 # Install native apps
 apps=(
     # alfred
