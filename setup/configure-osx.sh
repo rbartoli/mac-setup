@@ -6,6 +6,9 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 6000; kill -0 "$$" || exit; done 2>/dev/null &
 
+# This script modifies the current user's Spotlight preferences, disabling sharing of Spotlight searches with Apple
+curl -O https://fix-macosx.com/fix-macosx.py && /usr/bin/python fix-macosx.py
+
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
