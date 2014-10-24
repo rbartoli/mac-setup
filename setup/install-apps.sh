@@ -9,7 +9,7 @@ brew tap caskroom/versions
 
 # Install native apps
 apps=(
-    # alfred
+    alfred
     appcleaner
     asepsis
     caffeine
@@ -58,14 +58,14 @@ apps=(
     quicklook-json
 )
 
-brew cask install ${apps[@]}
+brew cask install --appdir=/Applications ${apps[@]}
 
 # Vagrant plugins
 vagrant plugin install vagrant-vbguest
 vagrant plugin install vagrant-digitalocean
 
 # Enable casks in Alfred
-# brew cask alfred link
+brew cask alfred link
 
 # This script modifies the current user's Spotlight preferences, disabling sharing of Spotlight searches with Apple
 curl -O https://fix-macosx.com/fix-macosx.py && /usr/bin/python fix-macosx.py
