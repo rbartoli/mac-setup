@@ -66,6 +66,10 @@ brew cask alfred link
 # Remove outdated versions from the cellar
 brew cask cleanup
 
+# Vagrant boxes
+vagrant box add hashicorp/precise64
+vagrant box add ubuntu/trusty64
+
 # Vagrant plugins
 vagrant plugin install vagrant-vbguest
 vagrant plugin install vagrant-digitalocean
