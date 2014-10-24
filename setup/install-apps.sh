@@ -58,17 +58,14 @@ apps=(
     quicklook-json
 )
 
-brew cask install --appdir=/Applications ${apps[@]}
-
-# Vagrant plugins
-vagrant plugin install vagrant-vbguest
-vagrant plugin install vagrant-digitalocean
+brew cask install --appdir=/Applications ${apps[@]}  2> /dev/null
 
 # Enable casks in Alfred
 brew cask alfred link
 
-# This script modifies the current user's Spotlight preferences, disabling sharing of Spotlight searches with Apple
-curl -O https://fix-macosx.com/fix-macosx.py && /usr/bin/python fix-macosx.py
-
 # Remove outdated versions from the cellar
-brew cleanup
+brew cask cleanup
+
+# Vagrant plugins
+vagrant plugin install vagrant-vbguest
+vagrant plugin install vagrant-digitalocean
