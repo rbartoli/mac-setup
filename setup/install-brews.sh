@@ -6,9 +6,11 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # Check if everything is fine
 brew doctor
 
-# Add additional repositories repository for newer or dev versions and bundle
-brew tap homebrew/dupes
-brew tap homebrew/boneyard
+# Add additional repositories
+brew tap homebrew/dupes # System duplicate formulae
+brew tap homebrew/boneyard # Archive of formulae removed from Homebrew
+brew tap caskroom/versions # Dev or alternate versions
+brew tap phinze/homebrew-cask # Homebrew-cask
 
 # Update brew
 brew update
@@ -17,6 +19,7 @@ brew update
 binaries=(
     ack
     bash
+    brew-cask
     coreutils
     findutils
     git
