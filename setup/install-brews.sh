@@ -20,13 +20,18 @@ binaries=(
     ack
     bash
     brew-cask
+    composer
     coreutils
     findutils
     git
     grep
+    imagemagick
+    mercurial
+    mysql
     ngrok
-    ntfs-3g
-    osxfuse
+    # ntfs-3g
+    # osxfuse
+    php56
     sshrc
     sshuttle
     tree

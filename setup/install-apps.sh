@@ -11,7 +11,8 @@ apps=(
     diffmerge
     dropbox
     evernote
-    firefox
+    # firefox
+    firefoxdeveloperedition
     flux
     # fontprep
     freemind
