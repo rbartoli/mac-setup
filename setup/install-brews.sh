@@ -18,10 +18,10 @@ brew update
 
 # Install other useful binaries
 binaries=(
+    php56
     ack
     bash
     brew-cask
-    composer
     coreutils
     dockutil
     findutils
@@ -33,13 +33,13 @@ binaries=(
     ngrok
     # ntfs-3g
     # osxfuse
-    php56
     sshrc
     sshuttle
     tree
     vim
     wget --with-iri
     z
+    composer
 )
 
 brew install ${binaries[@]}
