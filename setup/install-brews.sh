@@ -8,6 +8,7 @@ brew doctor
 
 # Add additional repositories
 brew tap homebrew/dupes # System duplicate formulae
+brew tap homebrew/php # PHP versions
 brew tap homebrew/boneyard # Archive of formulae removed from Homebrew
 brew tap caskroom/versions # Dev or alternate versions
 brew tap phinze/homebrew-cask # Homebrew-cask
@@ -22,6 +23,7 @@ binaries=(
     brew-cask
     composer
     coreutils
+    dockutil
     findutils
     git
     grep
