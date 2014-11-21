@@ -24,8 +24,10 @@ binaries=(
     findutils
     git
     grep
+    ngrok
     ntfs-3g
     osxfuse
+    sshrc
     sshuttle
     tree
     vim
@@ -39,10 +41,10 @@ brew install ${binaries[@]}
 brew cleanup
 
 # Install NTFS write support
-sudo mv /sbin/mount_ntfs /sbin/mount_ntfs.orig
-sudo ln -s /usr/local/sbin/mount_ntfs /sbin/mount_ntfs
-sudo /bin/cp -RfX /usr/local/opt/osxfuse/Library/Filesystems/osxfusefs.fs /Library/Filesystems/
-sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
+# sudo mv /sbin/mount_ntfs /sbin/mount_ntfs.orig
+# sudo ln -s /usr/local/sbin/mount_ntfs /sbin/mount_ntfs
+# sudo /bin/cp -RfX /usr/local/opt/osxfuse/Library/Filesystems/osxfusefs.fs /Library/Filesystems/
+# sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
 
 # Vim + plugins
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
