@@ -18,7 +18,6 @@ brew update
 
 # Install other useful binaries
 binaries=(
-    php56
     ack
     bash
     brew-cask
@@ -39,6 +38,8 @@ binaries=(
     vim
     wget --with-iri
     z
+    openssl
+    php56
     composer
 )
 
