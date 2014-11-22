@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# If /usr/include doesn't exist, then you need to do:
+sudo ln -s /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include /usr/include
 
 # Install homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -30,15 +32,12 @@ binaries=(
     mercurial
     mysql
     ngrok
-    # ntfs-3g
-    # osxfuse
     sshrc
     sshuttle
     tree
     vim
     wget --with-iri
     z
-    openssl
     php56
     composer
 )
@@ -47,12 +46,6 @@ brew install ${binaries[@]}
 
 # Remove outdated versions from the cellar
 brew cleanup
-
-# Install NTFS write support
-# sudo mv /sbin/mount_ntfs /sbin/mount_ntfs.orig
-# sudo ln -s /usr/local/sbin/mount_ntfs /sbin/mount_ntfs
-# sudo /bin/cp -RfX /usr/local/opt/osxfuse/Library/Filesystems/osxfusefs.fs /Library/Filesystems/
-# sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
 
 # Vim + plugins
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
