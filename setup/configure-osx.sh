@@ -23,12 +23,12 @@ dockutil --add "/Applications/Robomongo.app"
 dockutil --add "/Applications/Sequel Pro.app"
 dockutil --add "/Applications/MySQLWorkbench.app"
 defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
+dockutil --add "/Applications/Cyberduck.app"
+defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
 dockutil --add "/Applications/FreeMind.app"
 dockutil --add "/Applications/Skype.app"
 dockutil --add "/Applications/Evernote.app"
 dockutil --add "/Applications/Spotify.app"
-defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
-dockutil --add "/Applications/Cyberduck.app"
 dockutil --add '/Applications' --replacing 'Downloads' --view list --display folder
 dockutil --add '~/Downloads' --view list --display folder
 defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'

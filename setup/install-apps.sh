@@ -29,6 +29,7 @@ apps=(
     mosh
     mysqlworkbench
     nosleep
+    paragon-ntfs
     robomongo
     sequel-pro
     skype
@@ -43,6 +44,7 @@ apps=(
     vagrant
     virtualbox
     vlc
+    vmware-fusion
     # QuickLook plugins
     betterzipql
     qlcolorcode
