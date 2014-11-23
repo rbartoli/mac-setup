@@ -7,8 +7,16 @@ sudo -v
 while true; do sudo -n true; sleep 6000; kill -0 "$$" || exit; done 2>/dev/null &
 
 ###############################################################################
+# OSX for hackers                                                             #
+###############################################################################
+wget https://gist.githubusercontent.com/brandonb927/3195465/raw/84e047cbedd18343f6e318cafb62b1e2b0496de6/osx-for-hackers.sh
+chmod +x osx-for-hackers.sh
+./osx-for-hackers.sh
+
+###############################################################################
 # Add custom applications to dock                                             #
 ###############################################################################
+defaults write com.apple.dock persistent-apps -array
 dockutil --add "/Applications/Mission Control.app"
 dockutil --add "/Applications/Time Machine.app"
 defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
@@ -29,19 +37,18 @@ dockutil --add "/Applications/FreeMind.app"
 dockutil --add "/Applications/Skype.app"
 dockutil --add "/Applications/Evernote.app"
 dockutil --add "/Applications/Spotify.app"
+defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
 dockutil --add '/Applications' --replacing 'Downloads' --view list --display folder
 dockutil --add '~/Downloads' --view list --display folder
 defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
 
 ###############################################################################
-# OSX for hackers                                                             #
-###############################################################################
-curl -fsSL https://gist.githubusercontent.com/brandonb927/3195465/raw/84e047cbedd18343f6e318cafb62b1e2b0496de6/osx-for-hackers.sh | sh
-
-###############################################################################
 # This script disables sharing of Spotlight searches with Apple               #
 ###############################################################################
-curl -fsSL https://fix-macosx.com/fix-macosx.py && /usr/bin/python fix-macosx.py
+curl -fsSL 
+
+wget https://fix-macosx.com/fix-macosx.py
+/usr/bin/python fix-macosx.py
 
 ###############################################################################
 # Hide home folder directories                                                #
