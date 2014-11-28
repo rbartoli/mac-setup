@@ -69,3 +69,6 @@ vagrant box add ubuntu/trusty64
 # Vagrant plugins
 vagrant plugin install vagrant-vbguest
 vagrant plugin install vagrant-digitalocean
+
+# Sublime Text 3 configuration
+wget https://sublime.wbond.net/Package%20Control.sublime-package -P ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/
