@@ -36,6 +36,7 @@ binaries=(
     sshuttle
     tree
     vim
+    watchman
     wget --with-iri
     z
     php56
