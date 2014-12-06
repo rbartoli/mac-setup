@@ -11,10 +11,9 @@ apps=(
     diffmerge
     dropbox
     evernote
-    # firefox
     firefoxdeveloperedition
     flux
-    # fontprep
+    fontprep
     freemind
     google-chrome
     google-drive
@@ -45,7 +44,6 @@ apps=(
     virtualbox
     vlc
     vmware-fusion
-    # QuickLook plugins
     betterzipql
     qlcolorcode
     qlmarkdown
