@@ -13,7 +13,6 @@ brew tap homebrew/dupes # System duplicate formulae
 brew tap homebrew/php # PHP versions
 brew tap homebrew/boneyard # Archive of formulae removed from Homebrew
 brew tap caskroom/versions # Dev or alternate versions
-brew tap phinze/homebrew-cask # Homebrew-cask
 
 # Update brew
 brew update
@@ -22,7 +21,7 @@ brew update
 binaries=(
     ack
     bash
-    brew-cask
+    caskroom/cask/brew-cask
     coreutils
     dockutil
     findutils
@@ -32,6 +31,7 @@ binaries=(
     mercurial
     mysql
     ngrok
+    nvm
     sshrc
     sshuttle
     tree

@@ -5,7 +5,9 @@ apps=(
     alfred
     appcleaner
     asepsis
+    betterzipql
     caffeine
+    calibre
     cyberduck
     dash
     diffmerge
@@ -21,20 +23,28 @@ apps=(
     imageoptim
     ios7-screensaver
     iterm2
+    java6
+    java7
     jumpcut
     limechat
     mamp
+    microsoft-office
     mongodb
     mosh
     mysqlworkbench
-    nosleep
     paragon-ntfs
+    qlmarkdown
+    qlstephen
+    quicklook-csv
+    quicklook-json
     robomongo
     sequel-pro
+    skitch
     skype
     spectacle
     spotify
     sublime-text3
+    teamspeak-client
     teamviewer
     the-unarchiver
     torbrowser
@@ -44,12 +54,6 @@ apps=(
     virtualbox
     vlc
     vmware-fusion
-    betterzipql
-    qlcolorcode
-    qlmarkdown
-    qlstephen
-    quicklook-csv
-    quicklook-json
 )
 
 brew cask install --appdir=/Applications ${apps[@]}  2> /dev/null

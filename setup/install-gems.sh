@@ -8,3 +8,6 @@ rbenv global 2.1.3
 
 # Update installed gems
 sudo gem update --system
+
+# SASS
+gem install sass

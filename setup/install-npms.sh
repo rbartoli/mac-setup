@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# NVM
-brew install nvm
-
 export NVM_DIR=$HOME/.nvm
 mkdir $NVM_DIR
 source $(brew --prefix nvm)/nvm.sh
@@ -22,17 +19,14 @@ npm install -g bower
 npm install -g grunt-cli
 
 # Yeoman and generators
-npm install -g yo
-npm install -g generator-webapp
+npm install -g yo generator-webapp
+
+# Js development tools
+npm install -g csslint fixmyjs jsfmt jshint jsinspect pageres  
 
 # Node development tools
-npm install -g nodemon
-npm install -g node-inspector
-npm install -g svgo
+npm install -g nodemon node-inspector svgo
 
 # Ember development tools
 npm install -g ember-cli
 
-# Sublime Linter dependencies
-npm install -g jshint 
-npm install -g csslint
