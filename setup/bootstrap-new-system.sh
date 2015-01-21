@@ -7,7 +7,7 @@ sudo -v
 while true; do sudo -n true; sleep 6000; kill -0 "$$" || exit; done 2>/dev/null &
     
 echo "Installing shell..."
-    curl -fsSL https://raw.github.com/rbartoli/dotfiles/master/setup/install-shell.sh | sh
+    curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/install-shell.sh | sh
 
 echo "Installing brew packages..."
     curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/install-brews.sh | sh
