@@ -2,12 +2,12 @@
 
 brew install rbenv ruby-build
 
-# Install Ruby 2.1.3 and set it as the default version
-rbenv install 2.1.3
-rbenv global 2.1.3
+# Install Ruby 2.2.0 and set it as the default version
+rbenv install 2.2.0
+rbenv global 2.2.0
 
 # Update installed gems
 sudo gem update --system
 
 # SASS
-gem install sass
+gem install sass scss-lint

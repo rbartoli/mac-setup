@@ -9,10 +9,13 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew doctor
 
 # Add additional repositories
-brew tap homebrew/dupes # System duplicate formulae
-brew tap homebrew/php # PHP versions
-brew tap homebrew/boneyard # Archive of formulae removed from Homebrew
-brew tap caskroom/versions # Dev or alternate versions
+taps=(
+    homebrew/dupes # System duplicate formulae
+    homebrew/php # PHP versions
+    homebrew/boneyard # Archive of formulae removed from Homebrew
+    caskroom/versions # Dev or alternate versions
+)
+brew tap ${taps[@]} 
 
 # Update brew
 brew update
@@ -20,6 +23,8 @@ brew update
 # Install other useful binaries
 binaries=(
     ack
+    android-sdk
+    aria2
     bash
     caskroom/cask/brew-cask
     coreutils
@@ -28,19 +33,17 @@ binaries=(
     git
     grep
     imagemagick
+    mackup
     mercurial
     mysql
     ngrok
     nvm
     sshrc
-    sshuttle
     tree
     vim
     watchman
     wget --with-iri
     z
-    php56
-    composer
 )
 
 brew install ${binaries[@]}
