@@ -11,11 +11,14 @@ while true; do sudo -n true; sleep 6000; kill -0 "$$" || exit; done 2>/dev/null 
 ###############################################################################
 defaults write com.apple.dock persistent-apps -array
 dockutil --add "/Applications/Mission Control.app"
-dockutil --add "/Applications/Time Machine.app"
+defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
+dockutil --add "/Applications/Google Chrome Canary.app"
+dockutil --add "/Applications/FirefoxDeveloperEdition.app"
 defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
 dockutil --add "/Applications/Google Chrome.app"
-dockutil --add "/Applications/FirefoxDeveloperEdition.app"
+dockutil --add "/Applications/Firefox.app"
 dockutil --add "/Applications/Safari.app"
+dockutil --add "/Applications/Opera.app"
 defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
 dockutil --add "/Applications/iTerm.app"
 dockutil --add "/Applications/Sublime Text.app"

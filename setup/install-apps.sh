@@ -5,7 +5,6 @@ apps=(
     alfred
     appcleaner
     asepsis
-    atom
     caffeine
     cyberduck
     dash
