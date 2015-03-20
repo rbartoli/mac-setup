@@ -6,16 +6,17 @@ mkdir $NVM_DIR
 source $(brew --prefix nvm)/nvm.sh
 
 # Install latest version of Node.js
-nvm install 0.10
-nvm alias default 0.10
-nvm use 0.10
+nvm install stable
+nvm use stable
+nvm alias default stable
 
 npms=(
     # Front-end dependencies management
     bower
     
     # JavaScript task runners
-    grunt-cli gulp
+    grunt-cli 
+    gulp
     
     # JavaScript scaffolding tools
     yo 
@@ -29,16 +30,21 @@ npms=(
     jsinspect 
     pageres
     
-    # CSS development tools
-    csscomb csslint
+    # CSS/SASS development tools
+    csscomb 
+    csslint
+    node-sass
     
     # Node development tools
-    node-inspector nodemon
+    node-inspector 
+    nodemon
     
     # Ember development tools
-    npm install -g ember-cli
+    # ember-cli
     
     # General development tools
-    http-server git-stats npm-check-updates
+    http-server 
+    git-stats 
+    npm-check-updates
 )
 npm install -g ${npms[@]} 

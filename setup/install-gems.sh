@@ -10,4 +10,4 @@ rbenv global 2.2.0
 sudo gem update --system
 
 # SASS
-gem install sass scss-lint
+gem install sass compass scss-lint bundle 

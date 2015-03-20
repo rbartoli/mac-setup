@@ -13,13 +13,16 @@ apps=(
     doxie
     dropbox
     evernote
+    firefox
     firefoxdeveloperedition
     flux
     folx
     fontprep
     freemind
     google-chrome
+    google-chrome-canary
     google-drive
+    hipchat
     imagealpha
     imageoptim
     ios7-screensaver
@@ -32,7 +35,9 @@ apps=(
     mongodb
     mosh
     mysqlworkbench
-    paragon-ntfs
+    opera
+    # paragon-ntfs
+    phantomjs
     robomongo
     sequel-pro
     skitch
@@ -47,7 +52,8 @@ apps=(
     transmission
     tunnelbear
     vagrant
-    virtualbox
+    # For reasons of stability using version v4.3.20 (Issues exist in later versions up to 4.3.24)
+    virtualbox432096996
     vlc
     vmware-fusion
     
