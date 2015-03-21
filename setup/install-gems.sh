@@ -9,5 +9,11 @@ rbenv global 2.2.0
 # Update installed gems
 sudo gem update --system
 
-# SASS development tools
-sudo gem install sass compass scss-lint
+gems=(
+    # SASS development tools
+    sass 
+    compass 
+    scss-lint
+)
+
+sudo gem install ${gems[@]} 

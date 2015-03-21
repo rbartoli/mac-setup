@@ -6,18 +6,14 @@ apps=(
     appcleaner
     asepsis
     caffeine
-    cyberduck
     dash
     diffmerge
-    doxie
     dropbox
     evernote
     firefox
     firefoxdeveloperedition
     flux
-    folx
     fontprep
-    freemind
     google-chrome
     google-chrome-canary
     hipchat
@@ -28,7 +24,6 @@ apps=(
     java6
     java7
     jumpcut
-    limechat
     mosh
     opera
     phantomjs

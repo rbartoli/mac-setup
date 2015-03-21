@@ -14,7 +14,6 @@ brew doctor
 # Add additional repositories
 taps=(
     homebrew/dupes # System duplicate formulae
-    homebrew/php # PHP versions
     homebrew/boneyard # Archive of formulae removed from Homebrew
     caskroom/versions # Dev or alternate versions
 )
@@ -24,7 +23,7 @@ brew tap ${taps[@]}
 brew update
 
 # Install other useful binaries
-binaries=(
+brews=(
     ack
     aria2
     bash
@@ -47,7 +46,7 @@ binaries=(
     z
 )
 
-brew install ${binaries[@]}
+brew install ${brews[@]}
 
 # Remove outdated versions from the cellar
 brew cleanup

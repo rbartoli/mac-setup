@@ -43,4 +43,5 @@ npms=(
     http-server 
     npm-check-updates
 )
+
 npm install -g ${npms[@]} 
