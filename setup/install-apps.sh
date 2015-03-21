@@ -20,7 +20,6 @@ apps=(
     freemind
     google-chrome
     google-chrome-canary
-    google-drive
     hipchat
     imagealpha
     imageoptim
@@ -30,7 +29,6 @@ apps=(
     java7
     jumpcut
     limechat
-    mongodb
     mosh
     opera
     phantomjs
@@ -55,7 +53,7 @@ apps=(
     quicklook-json
 )
 
-brew cask install --appdir=/Applications ${apps[@]}  2> /dev/null
+brew cask install --appdir=/Applications ${apps[@]} 2> /dev/null
 
 # Remove outdated versions from the cellar
 brew cask cleanup

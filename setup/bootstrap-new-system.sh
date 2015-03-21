@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
 
-# Ask for the administrator password upfront
-sudo -v
-
-# Keep-alive: update existing `sudo` time stamp until `.osx` has finished
-while true; do sudo -n true; sleep 6000; kill -0 "$$" || exit; done 2>/dev/null &
-    
 echo "Installing shell..."
     curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/install-shell.sh | sh
 
@@ -26,6 +20,5 @@ echo "Installing native apps..."
 
 echo "Tweaking OS X..."
     curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/configure-osx.sh | sh
-
 
 echo "Installation completed. Now execute ./osx-for-hackers.sh in the terminal."

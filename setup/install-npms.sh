@@ -39,12 +39,8 @@ npms=(
     node-inspector 
     nodemon
     
-    # Ember development tools
-    # ember-cli
-    
     # General development tools
     http-server 
-    git-stats 
     npm-check-updates
 )
 npm install -g ${npms[@]} 
