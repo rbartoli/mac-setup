@@ -38,7 +38,6 @@ apps=(
     # (Issues exist in later versions up to 4.3.24)
     virtualbox432096996
     vlc
-    vmware-fusion
     
     # Quicklook extensions
     betterzipql
