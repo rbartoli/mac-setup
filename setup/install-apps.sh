@@ -4,7 +4,6 @@
 apps=(
     alfred
     appcleaner
-    asepsis
     caffeine
     dash
     diffmerge
@@ -35,7 +34,8 @@ apps=(
     teamviewer
     the-unarchiver
     vagrant
-    # For reasons of stability using version v4.3.20 (Issues exist in later versions up to 4.3.24)
+    # For reasons of stability using version v4.3.20 
+    # (Issues exist in later versions up to 4.3.24)
     virtualbox432096996
     vlc
     vmware-fusion

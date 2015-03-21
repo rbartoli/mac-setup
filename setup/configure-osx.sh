@@ -23,8 +23,7 @@ defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-ty
 dockutil --add "/Applications/iTerm.app"
 dockutil --add "/Applications/Sublime Text.app"
 defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
-dockutil --add "/Applications/FreeMind.app"
-dockutil --add "/Applications/Skype.app"
+dockutil --add "/Applications/HipChat.app"
 dockutil --add "/Applications/Evernote.app"
 dockutil --add "/Applications/Spotify.app"
 defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
