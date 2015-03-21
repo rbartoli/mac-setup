@@ -30,26 +30,17 @@ apps=(
     java7
     jumpcut
     limechat
-    microsoft-office
     mongodb
     mosh
-    mysqlworkbench
     opera
-    # paragon-ntfs
     phantomjs
-    robomongo
-    sequel-pro
     skitch
     skype
     spectacle
     spotify
     sublime-text3
-    teamspeak-client
     teamviewer
     the-unarchiver
-    torbrowser
-    transmission
-    tunnelbear
     vagrant
     # For reasons of stability using version v4.3.20 (Issues exist in later versions up to 4.3.24)
     virtualbox432096996
@@ -70,7 +61,6 @@ brew cask install --appdir=/Applications ${apps[@]}  2> /dev/null
 brew cask cleanup
 
 # Vagrant boxes
-vagrant box add hashicorp/precise64
 vagrant box add ubuntu/trusty64
 
 # Vagrant plugins
