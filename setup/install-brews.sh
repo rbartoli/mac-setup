@@ -34,6 +34,7 @@ brews=(
     git
     grep
     imagemagick
+    jq
     mackup
     mercurial
     ngrok
