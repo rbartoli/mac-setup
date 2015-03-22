@@ -31,7 +31,6 @@ apps=(
     spectacle
     spotify
     sublime-text3
-    teamviewer
     the-unarchiver
     vagrant
     # For reasons of stability using version v4.3.20 
