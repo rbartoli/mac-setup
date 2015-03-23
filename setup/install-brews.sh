@@ -12,12 +12,9 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew doctor
 
 # Add additional repositories
-taps=(
-    homebrew/dupes # System duplicate formulae
-    homebrew/boneyard # Archive of formulae removed from Homebrew
-    caskroom/versions # Dev or alternate versions
-)
-brew tap ${taps[@]} 
+brew tap homebrew/dupes # System duplicate formulae
+brew tap homebrew/boneyard # Archive of formulae removed from Homebrew
+brew tap caskroom/versions # Dev or alternate versions
 
 # Update brew
 brew update
