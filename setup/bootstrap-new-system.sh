@@ -21,4 +21,7 @@ echo "Installing native apps..."
 echo "Tweaking OS X..."
     curl -fsSL https://raw.github.com/twig2let/setup/master/setup/configure-osx.sh | sh
 
+echo "Generate SSH key for github..."
+	curl -fsSL https://raw.github.com/twig2let/setup/master/setup/generate-ssh-key.sh | sh
+
 echo "Installation completed. Now execute ./osx-for-hackers.sh in the terminal."
