@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#Generate SSH key for Git 
+#Generate SSH key and prompt add to Github
 
 function pause(){
    read -p "$*"
