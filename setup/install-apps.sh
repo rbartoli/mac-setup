@@ -6,25 +6,16 @@ apps=(
     appcleaner
     caffeine
     dash
-    diffmerge
-    dropbox
     evernote
     firefox
-    firefoxdeveloperedition
     flux
-    fontprep
     google-chrome
     google-chrome-canary
-    hipchat
-    imagealpha
-    imageoptim
     ios7-screensaver
     iterm2
     java6
     java7
     jumpcut
-    mosh
-    opera
     phantomjs
     skitch
     skype
@@ -33,10 +24,9 @@ apps=(
     sublime-text3
     the-unarchiver
     vagrant
-    # For reasons of stability using version v4.3.20 
-    # (Issues exist in later versions up to 4.3.24)
-    virtualbox432096996
+    virtualbox
     vlc
+    webstorm
     
     # Quicklook extensions
     betterzipql
