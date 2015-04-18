@@ -48,3 +48,25 @@ chflags hidden ~/Public
 
 wget https://gist.githubusercontent.com/brandonb927/3195465/raw/84e047cbedd18343f6e318cafb62b1e2b0496de6/osx-for-hackers.sh
 chmod +x osx-for-hackers.sh
+
+###############################################################################
+# Generate SSH Key - Github
+###############################################################################
+
+function pause(){
+   read -p "$*"
+}
+
+echo "Generating SSH key here: $HOME/.ssh/"
+ssh-keygen -t rsa -f $HOME/.ssh/$USER -q -N ''
+
+echo "Adding SSH key to ssh-agent"
+ssh-add $HOME/.ssh/$USER
+
+echo "Copying public key to clipboard"
+pbcopy < $HOME/.ssh/$USER.pub
+
+echo "Add the SSH key to github"
+open -g https://github.com/settings/ssh
+pause 'Then press [Enter] key to continue...'
+ssh -T git@github.com
