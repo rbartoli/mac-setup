@@ -23,12 +23,13 @@ npms=(
     
     # JavaScript development tools
     browserify 
+    
+    # JavaScript static code analysis
     fixmyjs 
     jscs 
     jsfmt 
     jshint 
     jsinspect 
-    pageres
     
     # CSS/SASS development tools
     csscomb 
