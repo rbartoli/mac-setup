@@ -1,28 +1,21 @@
 #!/usr/bin/env bash
 
-# Ask for the administrator password upfront
-sudo -v
-
-# Keep-alive: update existing `sudo` time stamp until `.osx` has finished
-while true; do sudo -n true; sleep 6000; kill -0 "$$" || exit; done 2>/dev/null &
-
 ###############################################################################
 # Add custom applications to dock                                             
 ###############################################################################
 
 defaults write com.apple.dock persistent-apps -array
 defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
-dockutil --add "/Applications/Google Chrome Canary.app"
+dockutil --add "/Applications/Google Chrome.app"
+dockutil --add "/Applications/Safari.app"
+dockutil --add "/Applications/Firefox.app"
 dockutil --add "/Applications/FirefoxDeveloperEdition.app"
 defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
-dockutil --add "/Applications/Google Chrome.app"
-dockutil --add "/Applications/Firefox.app"
-dockutil --add "/Applications/Safari.app"
-dockutil --add "/Applications/Opera.app"
-defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
 dockutil --add "/Applications/iTerm.app"
+dockutil --add "/Applications/WebStorm.app"
 dockutil --add "/Applications/Sublime Text.app"
 defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
+dockutil --add "/Applications/Robomongo.app"
 dockutil --add "/Applications/HipChat.app"
 dockutil --add "/Applications/Evernote.app"
 dockutil --add "/Applications/Spotify.app"

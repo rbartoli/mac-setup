@@ -34,12 +34,12 @@ brews=(
     jq
     mackup
     mercurial
+    mysql
     ngrok
     nvm
     sshrc
     tree
     vim
-    watchman
     wget --with-iri
     z
 )
@@ -48,6 +48,3 @@ brew install ${brews[@]}
 
 # Remove outdated versions from the cellar
 brew cleanup
-
-# Vim + plugins
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim

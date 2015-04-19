@@ -5,8 +5,10 @@ apps=(
     alfred
     appcleaner
     caffeine
+    cyberduck
     dash
     diffmerge
+    doxie
     dropbox
     evernote
     firefox
@@ -14,29 +16,34 @@ apps=(
     flux
     fontprep
     google-chrome
-    google-chrome-canary
+    google-drive
     hipchat
     imagealpha
     imageoptim
     ios7-screensaver
     iterm2
+    java
     java6
     java7
     jumpcut
+    mongodb
     mosh
-    opera
-    phantomjs
+    robomongo
+    sequel-pro
     skitch
     skype
     spectacle
     spotify
     sublime-text3
+    teamviewer
     the-unarchiver
+    torbrowser
+    transmission
     vagrant
-    # For reasons of stability using version v4.3.20 
-    # (Issues exist in later versions up to 4.3.24)
-    virtualbox432096996
+    virtualbox
     vlc
+    vmware-fusion
+    webstorm
     
     # Quicklook extensions
     betterzipql
@@ -50,12 +57,3 @@ brew cask install --appdir=/Applications ${apps[@]} 2> /dev/null
 
 # Remove outdated versions from the cellar
 brew cask cleanup
-
-# Vagrant boxes
-vagrant box add ubuntu/trusty64
-
-# Vagrant plugins
-vagrant plugin install vagrant-vbguest
-
-# Sublime Text 3 configuration
-wget https://sublime.wbond.net/Package%20Control.sublime-package -P ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/
