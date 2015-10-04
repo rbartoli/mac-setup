@@ -2,9 +2,9 @@
 
 brew install rbenv ruby-build
 
-# Install Ruby 2.2.0 and set it as the default version
-rbenv install 2.2.0
-rbenv global 2.2.0
+# Install Ruby 2.2.3 and set it as the default version
+rbenv install 2.2.3
+rbenv global 2.2.3
 
 # Update installed gems
 sudo gem update --system

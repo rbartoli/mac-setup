@@ -11,38 +11,25 @@ nvm use stable
 nvm alias default stable
 
 npms=(
-    # Front-end dependencies management
     bower
-    
-    # JavaScript task runners
+    bower-check-updates
+    browser-sync
+    cordova
+    ember-cli
+    eslint
     grunt-cli 
     gulp
-    
-    # JavaScript scaffolding tools
-    yo 
-    
-    # JavaScript development tools
-    browserify 
-    
-    # JavaScript static code analysis
-    fixmyjs 
-    jscs 
-    jsfmt 
-    jshint 
-    jsinspect 
-    
-    # CSS/SASS development tools
-    csscomb 
-    csslint
-    node-sass
-    
-    # Node development tools
+    http-server
+    ios-sim
+    jscs
+    node-debug
     node-inspector 
     nodemon
-    
-    # General development tools
-    http-server 
+    npm
     npm-check-updates
+    phonegap
+    speed-test
+    yo
 )
 
 npm install -g ${npms[@]} 

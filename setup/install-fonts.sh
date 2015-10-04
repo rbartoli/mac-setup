@@ -4,5 +4,5 @@
 brew tap caskroom/fonts
 
 # Install fonts
-wget -O Inconsolata-dz-Powerline.otf https://raw.githubusercontent.com/rbartoli/setup/master/fonts/Inconsolata-dz-Powerline.otf
-mv Inconsolata-dz-Powerline.otf ~/Library/Fonts
+wget -O Inconsolata-Powerline.otf https://raw.githubusercontent.com/rbartoli/setup/master/fonts/Inconsolata-Powerline.otf
+mv Inconsolata-Powerline.otf ~/Library/Fonts

@@ -7,6 +7,8 @@ This project is a collection of my scripts to bootstrap a new OS X system
 3. Open Xcode and accept the license agreement.
 
 ### Bootstrap new system
+Open Terminal.app, then paste the following command:
+
 ```bash
 curl -fsSL https://raw.github.com/rbartoli/setup/master/setup/bootstrap.sh | sh
 ```

@@ -1,9 +1,4 @@
 #!/usr/bin/env bash
-# If /usr/include doesn't exist, then you need to do:
-if [ ! -d /usr/include ];
-then
-    sudo ln -s /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include /usr/include
-fi
 
 # Install homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -22,6 +17,7 @@ brew update
 # Install other useful binaries
 brews=(
     ack
+    android-sdk
     aria2
     bash
     caskroom/cask/brew-cask
@@ -29,17 +25,22 @@ brews=(
     dockutil
     findutils
     git
+    git-extras
+    git-flow
     grep
     imagemagick
     jq
     mackup
     mercurial
     mysql
-    ngrok
     nvm
     sshrc
+    the_silver_searcher
+    tig
+    tmux
     tree
     vim
+    watchman
     wget --with-iri
     z
 )

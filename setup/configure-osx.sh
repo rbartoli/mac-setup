@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+DevToolsSecurity -enable
+
 ###############################################################################
 # Add custom applications to dock                                             
 ###############################################################################
@@ -9,14 +11,14 @@ defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-ty
 dockutil --add "/Applications/Google Chrome.app"
 dockutil --add "/Applications/Safari.app"
 dockutil --add "/Applications/Firefox.app"
-dockutil --add "/Applications/FirefoxDeveloperEdition.app"
 defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
 dockutil --add "/Applications/iTerm.app"
-dockutil --add "/Applications/WebStorm.app"
 dockutil --add "/Applications/Sublime Text.app"
+dockutil --add "/Applications/WebStorm.app"
 defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
 dockutil --add "/Applications/Robomongo.app"
 dockutil --add "/Applications/HipChat.app"
+dockutil --add "/Applications/Skype.app"
 dockutil --add "/Applications/Evernote.app"
 dockutil --add "/Applications/Spotify.app"
 defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'

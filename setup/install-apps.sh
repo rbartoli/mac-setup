@@ -6,28 +6,31 @@ apps=(
     appcleaner
     caffeine
     cyberduck
+    cyberghost
     dash
     diffmerge
     doxie
     dropbox
+    dropbox-encore
+    electrum
     evernote
     firefox
-    firefoxdeveloperedition
     flux
-    fontprep
+    gas-mask
     google-chrome
     google-drive
+    gpgtools
     hipchat
     imagealpha
     imageoptim
     ios7-screensaver
     iterm2
     java
-    java6
-    java7
     jumpcut
     mongodb
     mosh
+    ngrok
+    rescuetime
     robomongo
     sequel-pro
     skitch
@@ -38,12 +41,14 @@ apps=(
     teamviewer
     the-unarchiver
     torbrowser
+    totalspaces
     transmission
     vagrant
     virtualbox
     vlc
     vmware-fusion
-    webstorm
+    webstorm-bundled-jdk
+    ynab
     
     # Quicklook extensions
     betterzipql
