@@ -2,6 +2,9 @@
 
 DevToolsSecurity -enable
 
+# Enable text selection in QuickLook window
+defaults write com.apple.finder QLEnableTextSelection
+
 ###############################################################################
 # Add custom applications to dock                                             
 ###############################################################################

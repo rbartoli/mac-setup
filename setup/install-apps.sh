@@ -21,7 +21,6 @@ apps=(
     google-drive
     gpgtools
     hipchat
-    imagealpha
     imageoptim
     ios7-screensaver
     iterm2
@@ -52,9 +51,10 @@ apps=(
     
     # Quicklook extensions
     betterzipql
+    qlcolorcode
+    qlimagesize
     qlmarkdown
     qlstephen
-    quicklook-csv
     quicklook-json
 )
 
